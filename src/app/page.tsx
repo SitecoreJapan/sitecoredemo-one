@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <main>
       <div>
-        <p>Get started by editing&nbsp;</p>
+        <p>Get started with Content Hub ONE</p>
       </div>
     </main>
   );
