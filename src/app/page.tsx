@@ -1,11 +1,21 @@
+import { getAllBlog } from "@/api/queries/getBlog";
 import Image from "next/image";
 
-export default function Home() {
+export default async function Home() {
+  const posts = await getAllBlog();
+
   return (
-    <main>
-      <div>
-        <p>Get started with Content Hub ONE</p>
-      </div>
-    </main>
+    <>
+      <main>
+        <h1>Content Hub ONE - Title list</h1>
+        <ul>
+          {posts.map((post) => (
+            <li key={post.id}>
+              {post.title} {post.slug}
+            </li>
+          ))}
+        </ul>
+      </main>
+    </>
   );
 }
