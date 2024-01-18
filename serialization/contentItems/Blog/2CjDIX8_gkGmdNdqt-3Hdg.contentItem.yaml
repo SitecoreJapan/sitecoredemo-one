@@ -1,0 +1,419 @@
+﻿id: 2CjDIX8_gkGmdNdqt-3Hdg
+name: Get Content Hub ONE content using API Keys
+fields:
+  title:
+    value: API キーを利用してデータを取得する
+    type: ShortText
+  description:
+    value: コンテンツに関する情報を取得するために、今回は API キーを利用してデータを取得していきます。今回は２つのキーを作成して、データの取得に関して確認をしていきます。
+    type: ShortText
+  publishDate:
+    value: 2023-09-20T10:00:00.0000000+09:00
+    type: DateTime
+  slug:
+    value: ch-one-api-keys
+    type: ShortText
+  body:
+    value: >-
+      {
+        "type": "doc",
+        "content": [
+          {
+            "type": "heading",
+            "attrs": {
+              "level": 2
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "API キーの作成"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "今回初めて API キーを作成するため、以下のように何もキーが表示されない状況となっています。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "published"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "choneapi01"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "ボタンをクリックすると、以下のように Key の名前、およびタイプの確認が出てきます。まず最初に、Delivery の Type のキーを作成します。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "published"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "choneapi02"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "Save ボタンをクリックすると API キーが表示されます。なお、このキーに関しては、この画面で表示されている間は取得できますが、一覧から取ることはできません。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "published"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "choneapi03"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "もう一つ、Preview のキーを取得します。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "published"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "choneapi04"
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "attrs": {
+              "level": 2
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "API キーを利用してデータを取得する"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "Content Hub ONE で管理しているコンテンツについて、データを取得するための GraphQL のエンドポイントは以下のページで紹介されています。"
+              }
+            ]
+          },
+          {
+            "type": "bulletList",
+            "content": [
+              {
+                "type": "listItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "link",
+                            "attrs": {
+                              "href": "https://doc.sitecore.com/ch-one/en/developers/content-hub-one/graphql--preview-and-delivery-apis.html",
+                              "target": "_blank",
+                              "rel": "noopener noreferrer nofollow",
+                              "class": "css-14gsfk5"
+                            }
+                          }
+                        ],
+                        "text": "Preview and Delivery APIs"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "今回はキーを２つ作成しましたが、エンドポイントが Delivery と Preview で異なる形です。まず、Preview API IDE にアクセスします。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "published"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "choneapi05"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "画面にはエラーが表示されています。このエラーを回避するために、HTTP HEADERS を開いて、そこにキーを設定する必要があります。キーの記述方法は以下の Json に対して、上で取得したキーを入れてください。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "marks": [
+                  {
+                    "type": "code"
+                  }
+                ],
+                "text": "json { \"X-GQL-Token\":\"aEtSNzBsTaEtSNzBMA\" }"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "キーを設定すると、以下のように右側の画面からエラーの表示が消えました。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "published"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "choneapi06"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "実際に左側の画面に、"
+              },
+              {
+                "type": "text",
+                "marks": [
+                  {
+                    "type": "link",
+                    "attrs": {
+                      "href": "https://doc.sitecore.com/ch-one/en/developers/content-hub-one/graphql--graphql-query-examples.html",
+                      "target": "_blank",
+                      "rel": "noopener noreferrer nofollow",
+                      "class": "css-14gsfk5"
+                    }
+                  }
+                ],
+                "text": "GraphQL query examples"
+              },
+              {
+                "type": "text",
+                "text": " の Query を利用して以下のクエリを作成しました。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "marks": [
+                  {
+                    "type": "code"
+                  }
+                ],
+                "text": "json { allBlog { total results { name id title description } } }"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "結果として、以下のデータを取得することができました。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "marks": [
+                  {
+                    "type": "code"
+                  }
+                ],
+                "text": "json { \"data\": { \"allBlog\": { \"total\": 2, \"results\": [ { \"name\": \"First post\", \"id\": \"8J0Q3r0-H02ExS1sj27v8A\", \"title\": \"Welcome to Content Hub ONE Blog\", \"description\": \"This blog article provide Sitecore Content Hub ONE introduction.\" }, { \"name\": \"Second post\", \"id\": \"zueShIf2qk6CzN5EL-mAIQ\", \"title\": \"Did you know Headless CMS?\", \"description\": \"Sitecore Content Hub ONE is pure Headless CMS\" } ] } } }"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "preview においては、Published および Draft のステータスのコンテンツを取得することができています。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "次は Delivery の GraphQL の IDE に切り替えて、HTTP HEADERS に正しい値を設定します。そして Preview に向けて投げた同じクエリを利用して、結果を取得すると以下の Json データが返ってきます。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "marks": [
+                  {
+                    "type": "code"
+                  }
+                ],
+                "text": "json { \"data\": { \"allBlog\": { \"total\": 1, \"results\": [ { \"name\": \"First post\", \"id\": \"8J0Q3r0-H02ExS1sj27v8A\", \"title\": \"Welcome to Content Hub ONE Blog\", \"description\": \"This blog article provide Sitecore Content Hub ONE introduction.\" } ] } } }"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "published"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "choneapi07"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "API キーとエンドポイントを切り替えることで、公開済みのコンテンツのみを取得することができました。"
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "attrs": {
+              "level": 2
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "まとめ"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "実際に取得した Json のデータを見ると、下書き、公開済みという形でデータの取得が可能となっていることを確認することができました。次回はコンテンツタイプに対して、１つフィールドを追加して、取得するデータがどのように変わるのか、確認をします。"
+              }
+            ]
+          }
+        ]
+      }
+    type: RichText
+  blogImage:
+    value: []
+    type: Media

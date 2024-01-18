@@ -1,0 +1,724 @@
+﻿id: Oitfjf_zzkyMffcJTxE2nQ
+name: content hub one cli overview
+fields:
+  title:
+    value: Content Hub ONE CLI の活用
+    type: ShortText
+  description:
+    value: Content Hub ONE は SaaS のサービスですが、開発をする上でインポート、エクスポートといった作業は求められます。今回は、この部分を実現するコマンドラインツールについて紹介をします。
+    type: ShortText
+  publishDate:
+    value: 2023-09-19T10:00:00.0000000+09:00
+    type: DateTime
+  slug:
+    value: ch-one-cli
+    type: ShortText
+  body:
+    value: >-
+      {
+        "type": "doc",
+        "content": [
+          {
+            "type": "heading",
+            "attrs": {
+              "level": 2
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "CLI のインストール"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "Content Hub ONE CLI は Windows、macOS や Linux 向けに提供されており、またコンテナで動作する Dokcer の環境も選択することが可能です。このツールは、.NET 6 を利用して作られているため、.NET 6 をインストールしておく必要があります。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "Windows 環境でインストールをする場合は、"
+              },
+              {
+                "type": "text",
+                "marks": [
+                  {
+                    "type": "link",
+                    "attrs": {
+                      "href": "https://chocolatey.org/",
+                      "target": "_blank",
+                      "rel": "noopener noreferrer nofollow",
+                      "class": null
+                    }
+                  }
+                ],
+                "text": "Chocolatey"
+              },
+              {
+                "type": "text",
+                "text": " を利用して以下のようにインストールをしてください。"
+              }
+            ]
+          },
+          {
+            "type": "codeBlock",
+            "attrs": {
+              "language": "bash"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "choco install Sitecore.ContentHubOne.Cli --source https://nuget.sitecore.com/resources/v2/"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "macOS でツールを使うため、以下のようにインストールをします。"
+              }
+            ]
+          },
+          {
+            "type": "codeBlock",
+            "attrs": {
+              "language": "bash"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "brew tap sitecore/content-hub\nbrew install ch-one-cli"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "インストールの手順は以下のページを参考にしてください。"
+              }
+            ]
+          },
+          {
+            "type": "bulletList",
+            "content": [
+              {
+                "type": "listItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "link",
+                            "attrs": {
+                              "href": "https://doc.sitecore.com/ch-one/en/developers/content-hub-one/content-hub-one-cli--local-installation.html",
+                              "target": "_blank",
+                              "rel": "noopener noreferrer nofollow",
+                              "class": "css-14gsfk5"
+                            }
+                          }
+                        ],
+                        "text": "Local installation"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "インストールが終わったあと、バージョンを確認したところ、このブログを記述したタイミングでは 1.3.0 をインストールしたことになります。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "asset:1"
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "attrs": {
+              "level": 2
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "Content Hub ONE にログイン"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "コマンドラインからログインをする手順は以下のページに紹介されています。"
+              }
+            ]
+          },
+          {
+            "type": "bulletList",
+            "content": [
+              {
+                "type": "listItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "link",
+                            "attrs": {
+                              "href": "https://doc.sitecore.com/ch-one/en/developers/content-hub-one/content-hub-one-cli--log-in-with-the-cli.html",
+                              "target": "_blank",
+                              "rel": "noopener noreferrer nofollow",
+                              "class": "css-14gsfk5"
+                            }
+                          }
+                        ],
+                        "text": "Log in with the Content Hub ONE CLI"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "まず最初に、ツールでログインをする際に必要となる値を揃えていきます。管理画面の右上にあるアカウントのメニューからシステムの設定を開くと、以下のような画面になります。この画面はほとんどキーなどが表示されているので、その部分は切り取ってあります。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "asset:2"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "この画面から、"
+              },
+              {
+                "type": "text",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ],
+                "text": "organization-id "
+              },
+              {
+                "type": "text",
+                "text": "および"
+              },
+              {
+                "type": "text",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ],
+                "text": " tenant-id "
+              },
+              {
+                "type": "text",
+                "text": "を取得することができます。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "続いてメニュー画面の Integration > OAuth client を開くと、Device と Client credentials の2つの項目が表示されています。なお、それぞれのログインの方法はページの下にも記載されています。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "デバイス認証は以下の通り。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "asset:3"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "クライアント認証は以下の通り。このページから、"
+              },
+              {
+                "type": "text",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ],
+                "text": "client-id "
+              },
+              {
+                "type": "text",
+                "text": "と"
+              },
+              {
+                "type": "text",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ],
+                "text": " client-secret "
+              },
+              {
+                "type": "text",
+                "text": "を確認できます。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "asset:4"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "実はこのページの下のところのコマドンラインの説明部分があります。ここのコピーのアイコンをクリックすると、全ての値が設定された形でクリップボードに保存されるため、ターミナルなどにペーストするだけで実行できます。実行した結果、テナントに接続できたかどうかが表示されて、ログインに成功したかどうかがわかります。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "asset:5"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "詳細は以下のページで紹介されています。"
+              }
+            ]
+          },
+          {
+            "type": "bulletList",
+            "content": [
+              {
+                "type": "listItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "link",
+                            "attrs": {
+                              "href": "https://doc.sitecore.com/ch-one/en/developers/content-hub-one/content-hub-one-cli--log-in-with-the-cli.html",
+                              "target": "_blank",
+                              "rel": "noopener noreferrer nofollow",
+                              "class": "css-14gsfk5"
+                            }
+                          }
+                        ],
+                        "text": "Log in with the Content Hub ONE CLI"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "attrs": {
+              "level": 2
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "シリアライズ"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "実際に Content Hub ONE に作成したコンテンツタイプ、コンテンツ、メディアに関してシリアライズをして手元にデータとして作成したいと思います。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "まず最初に、シリアライズをするフォルダを作成します。この手順はスキップすることは可能ですが、その際はコマンドを実行しているフォルダで動作するような形となります。シリアライズしているデータはフォルダにまとめておきたいので、今回は以下のように実行しました。"
+              }
+            ]
+          },
+          {
+            "type": "codeBlock",
+            "attrs": {
+              "language": "bash"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "ch-one-cli serialization initialize -f serialization"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "これを実行すると、以下のようにフォルダが作成されます。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "asset:6"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "作成したフォルダに移動をして、Blog のコンテンツタイプを pull で取得します。"
+              }
+            ]
+          },
+          {
+            "type": "codeBlock",
+            "attrs": {
+              "language": "bash"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "cd serialization\nch-one-cli serialization pull content-type --id \"Blog\""
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "今回は１つしか作成していないのでこれで全てですが、ワイルドカードで取得することも可能です。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "続いてコンテンツを取得します。今回は２つのコンテンツを作成しているため、コンテンツタイプを指定して全てのデータを取得します。"
+              }
+            ]
+          },
+          {
+            "type": "codeBlock",
+            "attrs": {
+              "language": "bash"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "powershell ch-one-cli serialization pull content-item --content-type \"Blog\" --id \"*\""
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "最後に、メディアファイルを取得します。"
+              }
+            ]
+          },
+          {
+            "type": "codeBlock",
+            "attrs": {
+              "language": "bash"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "powershell ch-one-cli serialization pull media --id \"*\""
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "全てファイルになりました。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "asset:7"
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "attrs": {
+              "level": 2
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "シリアライズしたデータを戻す"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "まだ作っている量も少ないので、今回は Content Hub ONE のデータを全て削除して、そこに対して push でデータを送っていきます。まず削除をする際にには、publish 済みのコンテンツを unpublish として非公開として、コンテンツの削除、メディアの削除、コンテンツタイプの削除を実行していきます。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "空っぽになった Content Hub ONE に対して、まずメディアを戻していきます。"
+              }
+            ]
+          },
+          {
+            "type": "codeBlock",
+            "attrs": {
+              "language": "bash"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "powershell ch-one-cli serialization push media --id \"*\""
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "メディアが空っぽの状態から、ファイルが復活していることがわかります。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "asset:8"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "同様の手順として、コンテンツタイプ、コンテンツの順に push でデータを送っていきます。"
+              }
+            ]
+          },
+          {
+            "type": "codeBlock",
+            "attrs": {
+              "language": "bash"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "powershell ch-one-cli serialization push content-type --id \"Blog\" ch-one-cli serialization push content-item --content-type \"Blog\" --id \"*\""
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "無事コンテンツに関して復元することができました。この際、すべて Draft でアップロードされるため、別途公開作業などはする必要があります。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "asset:9"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "より細かい使い方は、以下のページを参考にして利用してください。"
+              }
+            ]
+          },
+          {
+            "type": "bulletList",
+            "content": [
+              {
+                "type": "listItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "link",
+                            "attrs": {
+                              "href": "https://doc.sitecore.com/ch-one/en/developers/content-hub-one/content-hub-one-cli--serialization.html",
+                              "target": "_blank",
+                              "rel": "noopener noreferrer nofollow",
+                              "class": "css-14gsfk5"
+                            }
+                          }
+                        ],
+                        "text": "Serialization"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "attrs": {
+              "level": 2
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "まとめ"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "便利なコマンドラインを利用することで、作成したデータのエクスポート、インポートが可能となりました。コードとして管理することが可能となるため、Next.js などのプロジェクトと合わせてデータの管理をすることが可能となります。"
+              }
+            ]
+          }
+        ]
+      }
+    type: RichText
+  blogImage:
+    value:
+    - type: Link
+      relatedType: Media
+      id: y5LLNdEfsEuUctfDffwd5Q
+    - type: Link
+      relatedType: Media
+      id: 4LmWGRJ0ikWJfEksn6dbTw
+    - type: Link
+      relatedType: Media
+      id: cZE65s5cA0ip-zV3kn-oZA
+    - type: Link
+      relatedType: Media
+      id: LeLVjiiZdUKkf5qKnjQ1HA
+    - type: Link
+      relatedType: Media
+      id: yyQrMXKdnk2jOoz4G5QBZw
+    - type: Link
+      relatedType: Media
+      id: 4jdDIdDHDE6_zrfAKb7H1w
+    type: Media

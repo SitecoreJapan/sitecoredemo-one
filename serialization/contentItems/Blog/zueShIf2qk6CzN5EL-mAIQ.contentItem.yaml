@@ -1,0 +1,414 @@
+﻿id: zueShIf2qk6CzN5EL-mAIQ
+name: Content Hub ONE Management UI
+fields:
+  title:
+    value: Content Hub ONE の管理画面
+    type: ShortText
+  description:
+    value: 今回は Content Hub ONE にログインをした後の管理画面で、どのようにコンテンツを定義していくのかについて紹介をしていきます。
+    type: ShortText
+  publishDate:
+    value: 2023-09-12T10:00:00.0000000+09:00
+    type: DateTime
+  slug:
+    value: ch-one-management-ui
+    type: ShortText
+  body:
+    value: >-
+      {
+        "type": "doc",
+        "content": [
+          {
+            "type": "heading",
+            "attrs": {
+              "level": 2
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "管理画面について"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "ログインをすると、ユーザーが利用することができる機能が以下のように表示されます。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "asset:p11X6aT4cEOCRJpUgeb7Kg"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "Sitecore AI に関しては後日紹介をしますが、それぞれの機能は以下の通りです。"
+              }
+            ]
+          },
+          {
+            "type": "bulletList",
+            "content": [
+              {
+                "type": "listItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "bold"
+                          }
+                        ],
+                        "text": "Model content"
+                      },
+                      {
+                        "type": "text",
+                        "text": " コンテンツの構造について設定をするための管理画面に移動します"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "bold"
+                          }
+                        ],
+                        "text": "Create content"
+                      },
+                      {
+                        "type": "text",
+                        "text": " 作成したコンテンツ形式を利用して、コンテンツを作成していきます"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "bold"
+                          }
+                        ],
+                        "text": "Upload media items"
+                      },
+                      {
+                        "type": "text",
+                        "text": " 画像ファイルなどをアップロードすることができます"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "bold"
+                          }
+                        ],
+                        "text": "Get it to channel"
+                      },
+                      {
+                        "type": "text",
+                        "text": " 構築する Web サイトやアプリと連携するための API キーの管理画面になります"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "attrs": {
+              "level": 2
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "コンテンツモデル"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "定義することができるモデルは２つのタイプを選択することができます。"
+              }
+            ]
+          },
+          {
+            "type": "bulletList",
+            "content": [
+              {
+                "type": "listItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "bold"
+                          }
+                        ],
+                        "text": "Content types"
+                      },
+                      {
+                        "type": "text",
+                        "text": " - コンテンツのデータ構造に関して定義することができます。最初のステップになります。"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "bold"
+                          }
+                        ],
+                        "text": "Taxonomies "
+                      },
+                      {
+                        "type": "text",
+                        "text": "- タクソノミーはコンテンツをカテゴリーに整理し、各カテゴリーのコンテンツを共通の特徴に基づいて分類するシステムを提供します。これにより、コンテンツ作成者、そしてコンテンツを消費する人々は、コンテンツをより簡単に並び替え、フィルタリング、検索することができます。"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "asset:1"
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "attrs": {
+              "level": 2
+            },
+            "content": [
+              {
+                "type": "text",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ],
+                "text": "コンテンツ"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "既に定義をした Content type を選択して、データを入力していく画面になります。この画面では、データの入力だけでなく作成をしたコンテンツの公開、非公開などの作業が可能になっています。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "asset:2"
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "attrs": {
+              "level": 2
+            },
+            "content": [
+              {
+                "type": "text",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ],
+                "text": "メディア"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "Content Hub ONE で利用する画像、ドキュメントなどをアップロードすることができる機能です。対応しているメディア形式は以下のページで参照することができます。"
+              }
+            ]
+          },
+          {
+            "type": "bulletList",
+            "content": [
+              {
+                "type": "listItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "link",
+                            "attrs": {
+                              "href": "https://doc.sitecore.com/ch-one/en/users/content-hub-one/content-authoring--create-a-media-item.html",
+                              "target": "_blank",
+                              "rel": "noopener noreferrer nofollow",
+                              "class": null
+                            }
+                          }
+                        ],
+                        "text": "Create a media item"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "asset:3"
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "attrs": {
+              "level": 2
+            },
+            "content": [
+              {
+                "type": "text",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ],
+                "text": "インテグレーション"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "この画面はすでに発行済みの API キーがあれば、キーに関して表示されます。キー以外にも OAuth client に関する情報も取得することが可能です。API キーに関してはもう少し先になりますが、作成、利用方法は紹介していく予定です。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "asset:4"
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "attrs": {
+              "level": 2
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "まとめ"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "今回は管理画面を一通り眺めた形です。コンテンツを作成するためには、まずはコンテンツ形式を作成する必要があります。次回はコンテンツ形式を作成したいと思います。"
+              }
+            ]
+          }
+        ]
+      }
+    type: RichText
+  blogImage:
+    value:
+    - type: Link
+      relatedType: Media
+      id: p11X6aT4cEOCRJpUgeb7Kg
+    - type: Link
+      relatedType: Media
+      id: PNqW1vb5f0ahJMT-5YaKNQ
+    - type: Link
+      relatedType: Media
+      id: BLiBLcuOtESLKibATChQoQ
+    - type: Link
+      relatedType: Media
+      id: _3bfavFWZkCRi43FtzIdjQ
+    - type: Link
+      relatedType: Media
+      id: AZgQ5cO2yka6mEtrPV3oQg
+    type: Media

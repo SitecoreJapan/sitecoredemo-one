@@ -1,0 +1,412 @@
+﻿id: hMgjcoy7hU-lcqtORzNvSA
+name: Create content model
+fields:
+  title:
+    value: コンテンツタイプを設定する
+    type: ShortText
+  description:
+    value: Content Hub ONE を利用するにあたって、まず最初にコンテンツのタイプを設定する必要があります。今回は、ブログの記事を持つコンテンツタイプを作成してみます。
+    type: ShortText
+  publishDate:
+    value: 2023-09-13T10:00:00.0000000+09:00
+    type: DateTime
+  slug:
+    value: ch-one-create-content-type
+    type: ShortText
+  body:
+    value: >-
+      {
+        "type": "doc",
+        "content": [
+          {
+            "type": "heading",
+            "attrs": {
+              "level": 2
+            },
+            "content": [
+              {
+                "type": "text",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ],
+                "text": "新しいコンテンツタイプの作成"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "管理画面で Content Types を開くと、中央もしくは右上に Add Type のボタンが表示されます。このボタンをクリックして、コンテンツタイプを作成していきます。クリックしてダイアログを開きます。今回は Name に Blog を指定します。なお ID には Name の内容に合わせて自動的に候補が設定されます。ID は基本的には小文字のアルファベットでスタートをする必要があります。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "asset:1"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "新しいコンテンツタイプの作成が完了すると、コンテンツタイプで利用するフィールドの設定画面になります。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "asset:2"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "Add Field をクリックするとフィールドの形式が一覧で表示されます。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "asset:3"
+              }
+            ]
+          },
+          {
+            "type": "bulletList",
+            "content": [
+              {
+                "type": "listItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Text - テキストデータ"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Rich text - 太字、イタリックなどさまざまなデータを入れることが可能です"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Nunber - 数字"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Boolean - Yes / No の選択"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Date / Time - 日付と時間"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Reference - 関連するコンテンツを指定する"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Media - 画像などのメディアファイル"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Select - Taxonomy を設定することができます"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "今回はブログの要素としてタイトル、概要、公開日付の３つを設定していきます（後日拡張していきます）。まず、Text をクリックすると以下の画面になります。Name には Title を指定して、Short text の項目とします。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "asset:4"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "タブをクリックして、この項目は必須項目とします。Short text に関しては文字数制限を入れることができます。今回はチェックせずに進みます。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "asset:5"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "Display Options に関しては、Blog title という文字を設定します。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "asset:6"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "続いて Description も作りますが、項目は Title と同じ項目の設定で、名前が違うという形で作成をします。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "asset:7"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "最後に日付の項目を追加します。Detail は以下のように設定します。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "asset:8"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "追加でブログとして必要な要素を追加していきます。Slug（URL で利用するユニークなキー）、Body として RichText そして Blog Image ということで Media のフィールドを作成します。作成をしたコンテンツタイプが一覧荷表示されるようになりました。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "asset:9"
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "attrs": {
+              "level": 2
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "まとめ"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "今回は Content Hub ONE で管理をするコンテンツの形式を作成しました。次回は、このコンテンツタイプを利用して、コンテンツの作成をしたいと思います。"
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "attrs": {
+              "level": 2
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "参考ページ"
+              }
+            ]
+          },
+          {
+            "type": "bulletList",
+            "content": [
+              {
+                "type": "listItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "link",
+                            "attrs": {
+                              "href": "https://doc.sitecore.com/ch-one/en/users/content-hub-one/content-modeling.html",
+                              "target": "_blank",
+                              "rel": "noopener noreferrer nofollow",
+                              "class": null
+                            }
+                          }
+                        ],
+                        "text": "Content modeling in Content Hub ONE"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    type: RichText
+  blogImage:
+    value:
+    - type: Link
+      relatedType: Media
+      id: oF8x3Hn_JEqSSbmBiNS9ag
+    - type: Link
+      relatedType: Media
+      id: asU6CBWRB0aCWh6Kd9NEXg
+    - type: Link
+      relatedType: Media
+      id: 2SLQQuOAjkSKtIzmMf67kg
+    - type: Link
+      relatedType: Media
+      id: jtRLt59yH0GrJjmX-qS7Ww
+    - type: Link
+      relatedType: Media
+      id: Jo5E3Oeth0q9EEtT6hakjA
+    - type: Link
+      relatedType: Media
+      id: xYcoUOqVBE2MD2RKbiHk2A
+    - type: Link
+      relatedType: Media
+      id: 58NTQzu980Si1713D4kGOA
+    - type: Link
+      relatedType: Media
+      id: _gafzn5hpEaVefS6rpEjmA
+    - type: Link
+      relatedType: Media
+      id: Psroc50zs0C9tQ7tlFPs4w
+    type: Media

@@ -1,0 +1,24 @@
+﻿id: a0mTZ7fAjEyYXmXSmdxN8A
+name: Create next.js project
+fields:
+  title:
+    value: Next.js のプロジェクトを新規に作成する
+    type: ShortText
+  description:
+    value: Content Hub ONE のコンテンツを扱うために新しい Next.js のプロジェクトを作成します。
+    type: ShortText
+  publishDate:
+    value: 
+    type: DateTime
+  slug:
+    value: create-next-app
+    type: ShortText
+  body:
+    value: 
+    type: RichText
+  blogImage:
+    value:
+    - type: Link
+      relatedType: Media
+      id: 743d28c10U-b4YUinsp-Hw
+    type: Media

@@ -1,0 +1,21 @@
+﻿id: mEyfrNZWskayS6HtCw76-g
+name: nextjs fetch graphql
+fields:
+  title:
+    value: Next.js の Fetch を利用してコンテンツ一覧を取得する
+    type: ShortText
+  description:
+    value: Next.js には fetch の機能を利用して、外部のデータを取得して処理をするための仕組みが含まれています。今回はこれを利用して、Blog のタイトルを取得したいと思います。
+    type: ShortText
+  publishDate:
+    value: 
+    type: DateTime
+  slug:
+    value: ch-one-next-js-fetch
+    type: ShortText
+  body:
+    value: 
+    type: RichText
+  blogImage:
+    value: []
+    type: Media

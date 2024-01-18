@@ -1,0 +1,260 @@
+﻿id: p18Nzpvvl0OkYW7odrvhog
+name: Content authoring
+fields:
+  title:
+    value: コンテンツを作成する
+    type: ShortText
+  description:
+    value: 前回作成をした Blog のコンテンツタイプを利用して、コンテンツを作成していきます。
+    type: ShortText
+  publishDate:
+    value: 2024-01-29T10:00:00.0000000+09:00
+    type: DateTime
+  slug:
+    value: ch-one-create-content
+    type: ShortText
+  body:
+    value: >-
+      {
+        "type": "doc",
+        "content": [
+          {
+            "type": "heading",
+            "attrs": {
+              "level": 2
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "コンテンツを作成する"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "コンテンツタイプを定義したため、Content のメニューに移動をすると + add content とボタンが表示されるようになりました。ボタンをクリックすると、Blog を選択することができます。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "asset:1"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "クリックをすると以下のように入力画面が表示されます。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "asset:2"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "コンテンツタイプを作成している時に定義をしていなかった Name というフィールドがあります。これは作成をするコンテンツの名前を定義するところで、システム的に利用するものになります。今回は以下の文章を設定します。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "asset:3"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "Save のボタンをクリックすると、以下のようにコンテンツの作成ができました。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "asset:4"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "保存をすると右側の Detail の項目に ID の項目があり、ランダムな文字列を割り当てます。Content Hub ONE のコンテンツ ID として利用できるものです。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "一覧の画面に戻ると、作成したコンテンツが表示されており、Add Content のボタンは右上に移動しています。今回はもう一度、+ Add Content をクリックします。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "asset:5"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "２つ目のコンテンツは以下のように作成しました。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "asset:6"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "２つのコンテンツが出来上がった状況は以下の通りです。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "asset:7"
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "attrs": {
+              "level": 2
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "まとめ"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "今回は Content Hub ONE ですでに定義したコンテンツタイプを利用して、２つのコンテンツを作成しました。この２つのシンプルなコンテンツを利用して、コンテンツの状態やデータのアクセス方法などを紹介していきます。"
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "attrs": {
+              "level": 2
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "参考ページ"
+              }
+            ]
+          },
+          {
+            "type": "bulletList",
+            "content": [
+              {
+                "type": "listItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "link",
+                            "attrs": {
+                              "href": "https://doc.sitecore.com/ch-one/en/users/content-hub-one/content-authoring.html",
+                              "target": "_blank",
+                              "rel": "noopener noreferrer nofollow",
+                              "class": "css-14gsfk5"
+                            }
+                          }
+                        ],
+                        "text": "Content authoring"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    type: RichText
+  blogImage:
+    value:
+    - type: Link
+      relatedType: Media
+      id: K2WLl4kxOUOyw1n-7ON3AQ
+    - type: Link
+      relatedType: Media
+      id: c1MmCRVeBkWSuSO2xXSrlA
+    - type: Link
+      relatedType: Media
+      id: fRRSp67WyUCqxHWMC_oY0Q
+    - type: Link
+      relatedType: Media
+      id: UoNxEGVpMU6MyRtiWA80DQ
+    - type: Link
+      relatedType: Media
+      id: 1tsUU2ZIF0aNml3Nu4FmFQ
+    - type: Link
+      relatedType: Media
+      id: a2LYXojsDkWAHzjm_l5Z6g
+    - type: Link
+      relatedType: Media
+      id: wDeVvNayhUyP2pW43PRZww
+    - type: Link
+      relatedType: Media
+      id: LGFT-jfRIkm2uDje4qec4w
+    type: Media

@@ -1,0 +1,286 @@
+﻿id: hNO0X2ICWUqZQqZTRaQxCg
+name: Typescript interface about Blog
+fields:
+  title:
+    value: Content Hub ONE で利用するクラスのフィールドやメソッドの定義（ブログ）
+    type: ShortText
+  description:
+    value: 前回は Content Hub ONE のメディアに関するインターフェイスを作成しました。今回は利用したいブログのコンテンツタイプに対するインターフェイスを作成したいと思います。
+    type: ShortText
+  publishDate:
+    value: 2023-09-25T10:00:00.0000000+09:00
+    type: DateTime
+  slug:
+    value: ch-one-interfaces-blog
+    type: ShortText
+  body:
+    value: >-
+      {
+        "type": "doc",
+        "content": [
+          {
+            "type": "heading",
+            "attrs": {
+              "level": 2
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "ブログのスキーマを確認する"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "前回のメディアの時と同じように、対象となるコンテンツの ID を利用してクエリを作成していきます。Postman の画面は以下のような感じです。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "published"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "choneinterfaces04"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "実際に作成をしたクエリで不要なものを削除、みやすくするために少し並び替えをしたのが以下のようになります。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "marks": [
+                  {
+                    "type": "code"
+                  }
+                ],
+                "text": "query query Blog { blog(id: \"8J0Q3r0-H02ExS1sj27v8A\") { id name title description publishDate blogImage { results { description fileHeight fileId fileName fileSize fileType fileUrl fileWidth id name } } } }"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "結果として取得するデータは以下のようになります。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "marks": [
+                  {
+                    "type": "code"
+                  }
+                ],
+                "text": "json { \"data\": { \"blog\": { \"id\": \"8J0Q3r0-H02ExS1sj27v8A\", \"name\": \"First post\", \"title\": \"Welcome to Content Hub ONE Blog\", \"description\": \"This blog article provide Sitecore Content Hub ONE introduction.\", \"publishDate\": \"2023-09-13T05:00:00.000Z\", \"blogImage\": { \"results\": [ { \"description\": \"\", \"fileHeight\": 2592, \"fileId\": \"61042d9018414a41a114d6ba586b6c38\", \"fileName\": null, \"fileSize\": 3324241, \"fileType\": \"image/jpeg\", \"fileUrl\": \"https://mms-delivery.sitecorecloud.io/api/media/v2/delivery/f36ae82c-5f19-40c5-4086-08daadeee1b8/61042d9018414a41a114d6ba586b6c38\", \"fileWidth\": 3872, \"id\": \"dfjaYMg7Lk-Gz3HY790J-Q\", \"name\": \"marcel-eberle-rendLSpkDtY-unsplash.jpg\" } ] } } } }"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "この Json のデータを扱うためのインターフェイスは以下のように設定をします。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "marks": [
+                  {
+                    "type": "code"
+                  }
+                ],
+                "text": "typescript import { Media } from \"@/interfaces/media\"; export interface Blog { id: string; name: string; title: string; description: string; publishDate: string; blogImage: { results: Partial<Media>[]; }; }"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "上記の Blog のインターフェイスに関して、ベースになるものとして定義しました。ブログの記事を利用する際のインターフェイスは以下のようにも定義しておきます。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "marks": [
+                  {
+                    "type": "code"
+                  }
+                ],
+                "text": "typescript export interface BlogResponse { data: { blog: Partial<Blog>; }; }"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "今回は、コンテンツフィールドに対して複数の画像を設定することが可能なため、この部分を results で取得して、そのファイルの形式は Media として設定をしています。"
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "attrs": {
+              "level": 2
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "全てのブログ記事のスキーマを確認する"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "ブログ記事単体のインターフェイスを作成しましたが、実際にはブログのデータを取得して、そのデータを利用して React でレンダリングしていく処理を追加していきます。実際のクエリは今回は以下のように設定します（blogImage の results の項目は省略しています）。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "marks": [
+                  {
+                    "type": "code"
+                  }
+                ],
+                "text": "query query AllBlog { allBlog { total results { description id name publishDate title blogImage { total results { id name description fileHeight fileId fileName fileSize fileType fileUrl fileWidth } } } } }"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "結果の json ファイルは以下のようになります。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "marks": [
+                  {
+                    "type": "code"
+                  }
+                ],
+                "text": "json { \"data\": { \"allBlog\": { \"total\": 2, \"results\": [ { \"name\": \"First post\", \"id\": \"8J0Q3r0-H02ExS1sj27v8A\", \"title\": \"Welcome to Content Hub ONE Blog\", \"description\": \"This blog article provide Sitecore Content Hub ONE introduction.\", \"publishDate\": \"2023-09-13T05:00:00.000Z\", \"blogImage\": { \"results\": [ { \"fileUrl\": \"https://mms-delivery.sitecorecloud.io/api/media/v2/delivery/f36ae82c-5f19-40c5-4086-08daadeee1b8/61042d9018414a41a114d6ba586b6c38\" } ] } }, { \"name\": \"Second post\", \"id\": \"zueShIf2qk6CzN5EL-mAIQ\", \"title\": \"Did you know Headless CMS?\", \"description\": \"Sitecore Content Hub ONE is pure Headless CMS\", \"publishDate\": \"2023-09-14T05:00:00.000Z\", \"blogImage\": { \"results\": [] } } ] } } }"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "２つの記事のデータが json として取得できています。これをインターフェイスとする場合、今回は以下のコードを用意しました。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "marks": [
+                  {
+                    "type": "code"
+                  }
+                ],
+                "text": "typescript export interface AllBlogResponse { data: { allBlog: { total: number; results: Partial<Blog>[]; }; }; }"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "すでに用意している BlogResponse はブログの記事を取得したときに利用するインターフェイスとし、それを配列として持っている AllBlogResponse という形で設定しておきました。"
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "attrs": {
+              "level": 2
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "まとめ"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "前回は Json のデータを元にインターフェイスを作成しましたが、今回はメディアを複数持つような構成としていること、またブログを複数取得する際に、複数のコンテンツを取得するようにインターフェイスをまとめてみました。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "ここまでは Postman を利用して実行結果を取得、インターフェイスを作成していた形です。このインターフェイスを利用して、Content Hub ONE に接続してコンテンツを利用したいと思います。"
+              }
+            ]
+          }
+        ]
+      }
+    type: RichText
+  blogImage:
+    value: []
+    type: Media

@@ -1,0 +1,232 @@
+﻿id: -rXaDjjH-Uu21KoOIay1Sw
+name: Typescript interface for media
+fields:
+  title:
+    value: Content Hub ONE で利用するクラスのフィールドやメソッドの定義（メディア）
+    type: ShortText
+  description:
+    value: Content Hub ONE のデータを取得するにあたって、Typescript で利用するインターフェイスを先に実装していきます。作業としては Postman を利用してクエリを確認していきながら、作成していきます。初回は Media に関するインターフェイスの作成です。
+    type: ShortText
+  publishDate:
+    value: 2023-09-22T10:00:00.0000000+09:00
+    type: DateTime
+  slug:
+    value: ch-one-interfaces-media
+    type: ShortText
+  body:
+    value: >-
+      {
+        "type": "doc",
+        "content": [
+          {
+            "type": "heading",
+            "attrs": {
+              "level": 2
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "メディアのスキーマを確認する"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "以前の記事で Postman と連携をした際に、Postman が Content Hub ONE のスキーマを読み込んでツールで見やすくなっています。以下のような画面です。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "published"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "choneinterfaces01"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "例えば Media をクリックすると以下のように画面が切り替わります。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "published"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "choneinterfaces02"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "実際にアップロード済みの Media の ID を設定をしてクエリを実行すると、以下のような形で結果を取得しています。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "published"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "choneinterfaces03"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "システムが持っているデータも取ることができますが、今回はメディアファイルに関するコードを取得したいだけですので以下のようにクエリを作成します。順番は少し変更をしました。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "marks": [
+                  {
+                    "type": "code"
+                  }
+                ],
+                "text": "query query Media { media(id: \"xWBppBJex0Sw140oshAPaw\") { id name description fileId fileUrl fileType fileHeight fileWidth fileSize } }"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "取得する結果は以下の通りです。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "json { \"data\": { \"media\": { \"id\": \"xWBppBJex0Sw140oshAPaw\", \"name\": \"markus-winkler-cxoR55-bels-unsplash.jpg\", \"description\": \"update\", \"fileId\": \"eff64332ba5d44d4baf5898b59ac4e57\", \"fileUrl\": \""
+              },
+              {
+                "type": "text",
+                "marks": [
+                  {
+                    "type": "link",
+                    "attrs": {
+                      "href": "https://mms-delivery.sitecorecloud.io/api/media/v2/delivery/f36ae82c-5f19-40c5-4086-08daadeee1b8/eff64332ba5d44d4baf5898b59ac4e57",
+                      "target": "_blank",
+                      "rel": "noopener noreferrer nofollow",
+                      "class": null
+                    }
+                  }
+                ],
+                "text": "https://mms-delivery.sitecorecloud.io/api/media/v2/delivery/f36ae82c-5f19-40c5-4086-08daadeee1b8/eff64332ba5d44d4baf5898b59ac4e57"
+              },
+              {
+                "type": "text",
+                "text": "\", \"fileType\": \"image/jpeg\", \"fileHeight\": 2666, \"fileWidth\": 3999, \"fileSize\": 1554809 } } }"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "この結果を利用して、interface のファイルを以下のように作成します。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "marks": [
+                  {
+                    "type": "code"
+                  }
+                ],
+                "text": "javascript export interface Media { id: string; name: string; description: string; fileHeight: number; fileId: string; fileName: string; fileSize: number; fileType: string; fileUrl: string; fileWidth: number; }"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "Media に関してはシステムで持っているスキーマになるので基本的には拡張することはないものです。そして、Media に関しては Blog の記事のコンテンツタイプのフィールドとして定義しています。この際に今回のインターフェイスを利用する形となります。"
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "attrs": {
+              "level": 2
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "まとめ"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "今回は実際に Next.js での連携実装をする前準備の１つ、Media のインターフェイスを作成しました。次回は、Blog のインターフェイスを作成します。"
+              }
+            ]
+          }
+        ]
+      }
+    type: RichText
+  blogImage:
+    value: []
+    type: Media

@@ -1,0 +1,200 @@
+﻿id: i9XBalS29keaHyUCjokECw
+name: About content status
+fields:
+  title:
+    value: コンテンツのステータスについて
+    type: ShortText
+  description:
+    value: コンテンツを作成したタイミングでは、ステータスは draft - 下書きという形で保存されています。今回はステータスに関して紹介をします。
+    type: ShortText
+  publishDate:
+    value: 2023-09-15T10:00:00.0000000+09:00
+    type: DateTime
+  slug:
+    value: ch-one-content-status
+    type: ShortText
+  body:
+    value: >-
+      {
+        "type": "doc",
+        "content": [
+          {
+            "type": "heading",
+            "attrs": {
+              "level": 2
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "ステータスに関して"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "コンテンツを作成した時に、特に何もしない場合は draft - 下書きとして保存されます。コンテンツに関して Publish を実行すると Published のステータスに変更されます。公開済みのコンテンツに関しては、Unpublish を実行することで Draft に戻りますが、編集をしただけであれば Changed のステータスに変わります。ヘルプで提供されている以下の画像がステータス変更の流れです。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "asset:1"
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "attrs": {
+              "level": 2
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "コンテンツを公開する"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "今回は１つ目のコンテンツに関して公開していきます。公開をする際には、コンテンツを開くと右上に Publish のボタンが表示されているため、これをクリックして公開します。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "asset:2"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "しばらくするとステータスは Published に更新されます。コンテンツの公開を停止する場合は、右上のメニューの項目に Unpublish の項目があるため、これをクリックすると Draft に戻ります。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "asset:3"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "コンテンツ一覧では、以下の画面のようにステータスを確認することができます。また、フィルタを利用して、Published のみ、Draft のみという形で表示することも可能です。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "asset:4"
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "attrs": {
+              "level": 2
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "まとめ"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "コンテンツのステータスに関して、Draft 、Publish のコンテンツが１つづつ準備することができました。ではこれらの情報をどういう形でてに入れることができるでしょうか？次回は GraphQL を利用して取得したいと思います。"
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "attrs": {
+              "level": 2
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "関連ページ"
+              }
+            ]
+          },
+          {
+            "type": "bulletList",
+            "content": [
+              {
+                "type": "listItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "link",
+                            "attrs": {
+                              "href": "https://doc.sitecore.com/ch-one/en/users/content-hub-one/content-delivery.html",
+                              "target": "_blank",
+                              "rel": "noopener noreferrer nofollow",
+                              "class": null
+                            }
+                          }
+                        ],
+                        "text": "Content delivery"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    type: RichText
+  blogImage:
+    value:
+    - type: Link
+      relatedType: Media
+      id: oPeoBgytxU2oTxKE-034FQ
+    - type: Link
+      relatedType: Media
+      id: GkiAPj3MOEaHP2AK3eg_jQ
+    - type: Link
+      relatedType: Media
+      id: F8gr3zEJt0SjOGQXIxS9KA
+    - type: Link
+      relatedType: Media
+      id: mCTevV19Fkuo1YKNKVeVXw
+    - type: Link
+      relatedType: Media
+      id: SlpC_-8WEE6sU_YG6MzKiQ
+    type: Media

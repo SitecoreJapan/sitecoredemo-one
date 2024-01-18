@@ -1,0 +1,296 @@
+﻿id: 72f24rjKvUuhnzcPAzXYsg
+name: get content using Postman
+fields:
+  title:
+    value: Content Hub ONE のデータを Postman で取得する
+    type: ShortText
+  description:
+    value: GraphQL の IDE を利用してデータの取得をしていましたが、Postman を利用してアクセスすることも可能です。今回は、Postman を利用してデータを取得していく手順を紹介します。
+    type: ShortText
+  publishDate:
+    value: 2023-09-21T10:00:00.0000000+09:00
+    type: DateTime
+  slug:
+    value: ch-one-graphql-postman
+    type: ShortText
+  body:
+    value: >-
+      {
+        "type": "doc",
+        "content": [
+          {
+            "type": "heading",
+            "attrs": {
+              "level": 2
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "Postman の設定"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "まず最初に、Environment の設定を作成していきます。URL に関しては以下のページで確認をしてください。"
+              }
+            ]
+          },
+          {
+            "type": "bulletList",
+            "content": [
+              {
+                "type": "listItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "link",
+                            "attrs": {
+                              "href": "https://doc.sitecore.com/ch-one/en/developers/content-hub-one/graphql--preview-and-delivery-apis.html",
+                              "target": "_blank",
+                              "rel": "noopener noreferrer nofollow",
+                              "class": "css-14gsfk5"
+                            }
+                          }
+                        ],
+                        "text": "Preview and Delivery APIs"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "今回は endpoint として Preview API Endpoint を、api_key に関しては Previwe API キーを設定します。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "published"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "chonepostman01"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "同じように delivery に関しても作成しますが、endpoint および api_key の項目名は変更せず、値のみを変更してください。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "published"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "chonepostman02"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "新しいリクエストを作成しますが、ここでは GraphQL の項目を選択します。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "published"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "chonepostman03"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "環境として Preview を選択、Enter URL には {{endpoint}} を設定、Headers には X-GQL-Token に対して {{api_key}} を設定します。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "published"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "chonepostman04"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "Query のタブに切り替えて、ブラウザで実行した Query を入れてください。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "published"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "chonepostman05"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "Query を実行すると、以下のように結果が返ってきます。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "published"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "chonepostman06"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "実行をすると、GraphQL のスキーマをダウンロードをして、Postman で Query を簡単に作成できるようになります。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "published"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "chonepostman07"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "環境を Preview から Delivery に変更するだけで、Published となっているコンテンツの Json データを取得することもできました。"
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "attrs": {
+              "level": 2
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "まとめ"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "今回は Postman を利用して Query を実行して、結果を取得することができました。また、Postman に Schema を連携させることで、クエリを簡単に作成することが可能となりました。"
+              }
+            ]
+          }
+        ]
+      }
+    type: RichText
+  blogImage:
+    value: []
+    type: Media

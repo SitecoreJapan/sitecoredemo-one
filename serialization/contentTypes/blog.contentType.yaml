@@ -1,0 +1,62 @@
+﻿id: blog
+name:
+  en-US: Blog
+description:
+  en-US: Blog articles
+fields:
+- type: ShortText
+  id: title
+  name:
+    en-US: Title
+  required: True
+  helpText:
+    en-US: Blog title
+  reference: 
+  rules:
+    length: 
+- type: ShortText
+  id: description
+  name:
+    en-US: Description
+  required: True
+  helpText:
+    en-US: Blog description
+  reference: 
+  rules:
+    length: 
+- type: DateTime
+  id: publishDate
+  name:
+    en-US: Publish Date
+  required: True
+  helpText:
+    en-US: Publish date
+  reference: 
+- type: ShortText
+  id: slug
+  name:
+    en-US: Slug
+  required: True
+  helpText:
+    en-US: ''
+  reference: 
+  rules:
+    length: 
+- type: RichText
+  id: body
+  name:
+    en-US: Body
+  required: True
+  helpText:
+    en-US: ''
+  reference: 
+- type: Media
+  id: blogImage
+  name:
+    en-US: Blog Image
+  required: True
+  helpText:
+    en-US: ''
+  reference: 
+  rules:
+    limit: 
